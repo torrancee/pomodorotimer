@@ -5,6 +5,9 @@ import QtQuick.Layouts 1.3
 Item {
     width: 660
     height: 250
+    property alias dial: dial
+    property alias textField: textField
+    property alias button: button
 
     Dial {
         id: dial
@@ -12,6 +15,15 @@ Item {
         y: 108
         width: 188
         height: 101
+        font.weight: Font.Normal
+        opacity: 1
+        padding: 0
+        font.capitalization: Font.AllUppercase
+        spacing: 1
+        stepSize: 0
+        to: 25
+        from: 15
+        value: 15
     }
 
     ProgressBar {

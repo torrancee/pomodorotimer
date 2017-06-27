@@ -7,8 +7,14 @@ ApplicationWindow {
     width: 660
     height: 250
     title: qsTr("Pomodoro app")
+    background:
+        Image {
+        id: name
+        source: "qrc:/img/img/concrete-texture.png"
+    }
 
     Page1 {
+
     }
 
 //    SwipeView {
