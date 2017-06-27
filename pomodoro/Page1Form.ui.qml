@@ -7,7 +7,6 @@ Item {
     height: 250
     property alias progressBar: progressBar
     property alias button1: button1
-    property alias textField1: textField1
     property alias dial: dial
     property alias textField: textField
     property alias button: button
@@ -35,8 +34,9 @@ Item {
         y: 25
         width: 585
         height: 44
+        to: 1
         font.pointSize: 10
-        value: 0.3
+        value: 0
     }
 
     Button {
@@ -67,14 +67,5 @@ Item {
     }
 
     GridLayout {
-    }
-
-    TextField {
-        id: textField1
-        x: 438
-        y: 185
-        width: 185
-        height: 40
-        text: qsTr("Text Field")
     }
 }

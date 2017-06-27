@@ -4,19 +4,23 @@ import QtMultimedia 5.8
 Page1Form {
 
     textField.text : dial.value + " min"
+    progressBar.to : dial.value * 60
 
     Timer{
         id: timerId
         interval: 1000
         running: false
         repeat: true
-        triggeredOnStart: true
-        onRunningChanged: timer = 0
-        property var timer: 0
+        triggeredOnStart: false
 
         onTriggered: {
-            textField1.text = timer
-            timer +=1
+            progressBar.value += 1
+
+            if(progressBar.value == progressBar.to){
+               timerId.stop()
+               ring.play()
+               dial.enabled = true
+            }
         }
     }
 
@@ -32,12 +36,12 @@ Page1Form {
     button.onClicked: {
         timerId.start()
         progressBar.value = 0
-        ring.play()
-
+        dial.enabled = false
     }
 
     button1.onClicked: {
         timerId.stop()
         progressBar.value = 0
+        dial.enabled = true
     }
 }
