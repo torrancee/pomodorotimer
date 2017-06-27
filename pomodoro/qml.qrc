@@ -8,4 +8,7 @@
     <qresource prefix="/img">
         <file>img/concrete-texture.png</file>
     </qresource>
+    <qresource prefix="/sound">
+        <file>sound/telephone-ring-03a.wav</file>
+    </qresource>
 </RCC>

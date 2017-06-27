@@ -1,4 +1,5 @@
 import QtQuick 2.7
+import QtMultimedia 5.8
 
 Page1Form {
 
@@ -19,6 +20,11 @@ Page1Form {
         }
     }
 
+    SoundEffect{
+        id: ring
+        source: "qrc:/sound/sound/telephone-ring-03a.wav"
+    }
+
     dial.onValueChanged: {
         textField.text = dial.value.toPrecision(2) + " min"
     }
@@ -26,6 +32,7 @@ Page1Form {
     button.onClicked: {
         timerId.start()
         progressBar.value = 0
+        ring.play()
 
     }
 

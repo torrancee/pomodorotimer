@@ -14,8 +14,8 @@ Item {
 
     Dial {
         id: dial
-        x: 187
-        y: 108
+        x: 236
+        y: 103
         width: 188
         height: 101
         font.weight: Font.Normal
@@ -59,8 +59,10 @@ Item {
 
     TextField {
         id: textField
-        x: 381
+        x: 438
         y: 139
+        width: 185
+        height: 40
         text: qsTr("Text Field")
     }
 
@@ -69,8 +71,10 @@ Item {
 
     TextField {
         id: textField1
-        x: 381
-        y: 190
+        x: 438
+        y: 185
+        width: 185
+        height: 40
         text: qsTr("Text Field")
     }
 }
