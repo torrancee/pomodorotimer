@@ -5,6 +5,9 @@ import QtQuick.Layouts 1.3
 Item {
     width: 660
     height: 250
+    property alias progressBar: progressBar
+    property alias button1: button1
+    property alias textField1: textField1
     property alias dial: dial
     property alias textField: textField
     property alias button: button
@@ -62,5 +65,12 @@ Item {
     }
 
     GridLayout {
+    }
+
+    TextField {
+        id: textField1
+        x: 381
+        y: 190
+        text: qsTr("Text Field")
     }
 }
