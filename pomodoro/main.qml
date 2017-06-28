@@ -10,6 +10,9 @@ ApplicationWindow {
     background:
         Image {
         id: name
+        width: 660
+        height: 250
+        fillMode: Image.Tile
         source: "qrc:/img/img/concrete-texture.png"
     }
 
